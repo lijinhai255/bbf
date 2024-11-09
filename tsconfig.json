@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["typings", "./node_modules/@types"],
+    "baseUrl": "./",
+    "paths": {
+      "@interfaces/*": ["interface/*"],
+      "@config/*": ["config/*"],
+      "@middlewares/*": ["middlewares/*"]
+    }
+  },
+  "include": ["**/*"]
+}
