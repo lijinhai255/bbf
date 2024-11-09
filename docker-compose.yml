@@ -1,0 +1,15 @@
+version: "3"
+services:
+  yd-app:
+    build:
+      context: . # 指定构建上下文为当前目录
+      dockerfile: Dockerfile # 指定 Dockerfile 文件
+    ports:
+      - "8081:8081" # 将容器的 3000 端口映射到主机的 3000 端口
+    environment:
+      NODE_ENV: production
+      TS_NODE_PROJECT: ./tsconfig.json
+    volumes:
+      - .:/app # 将当前目录挂载到容器中的 /app 目录，便于开发调试
+      - /app/node_modules # 忽略 node_modules 目录，避免覆盖
+    restart: always # 保证容器在崩溃后自动重启
