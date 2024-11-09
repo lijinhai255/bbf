@@ -1,17 +1,17 @@
 import { GET, route } from 'awilix-koa';
-// import { Context } from '@interfaces/IKoa';
+import { Context } from '@interfaces/IKoa';
 
 @route('/')
 class IndexController {
-  @route('/')
   @GET()
-  async actionList(ctx: {
-    body: any;
-    render: (arg0: string) => any;
-  }): Promise<void> {
-    ctx.body = {
-      data: 'IndexController',
-    };
+  async actionList(ctx: Context): Promise<void> {
+    //react vue ...html字符串 diff
+    const data = await ctx.render('index', {
+      data: '服务端数据',
+    });
+    console.log('🍊🍊🍊🍊🍊🍊🍊 ', data);
+
+    ctx.body = data;
   }
 }
 export default IndexController;
