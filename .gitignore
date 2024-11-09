@@ -1,0 +1,39 @@
+# Node.js dependencies
+node_modules/
+yarn.lock
+package-lock.json
+
+# TypeScript build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE and editor specific files
+.idea/
+.vscode/
+*.swp
+
+# Compiled view templates
+views/*.html
+
+# Optional npm cache directory
+.npm
+
+# Additional folders in your structure
+assets/
